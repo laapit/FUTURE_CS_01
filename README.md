@@ -1,24 +1,28 @@
-Task Overview
-Network and web application security assessment of a demo banking site to identify vulnerabilities and security weaknesses.
+FUTURE_CS_03 — API Security Risk Analysis Report
+
+
+Read-only security analysis of a public REST API to identify common API security risks and vulnerabilities.
 Tools Used
 
-Nmap — Network port scanning and service detection
-OWASP ZAP — Web application vulnerability scanner
-Browser DevTools — Manual inspection and testing
-Canva — Documentation and reporting
+-Postman — API request testing and response inspection
+-Browser DevTools — HTTP header and network analysis
+-ReqRes API Documentation — Official API reference
+-Microsoft Word — Documentation and reporting
 
-Target Tested
-Target: Altoro Mutual Demo Site (demo.testfire.net)
-Type: Public demo banking application
-Scope: Read-only vulnerability assessment (no exploitation)
+API Tested
+-Target: ReqRes Public Test API (https://reqres.in)
+-Type: Public REST API for testing and learning
+-Scope: Read-only requests only (GET, safe POST)
 
 Analysis Approach
-Performed network reconnaissance using Nmap to identify open ports and services, then conducted web application scanning with OWASP ZAP to detect vulnerabilities. Manual testing verified findings. Risk classified as High/Medium/Low based on severity and exploitability.
-Vulnerabilities Found
+Tested API endpoints using Postman to identify security weaknesses including authentication issues, data exposure, rate limiting, authorization flaws, and input validation. Risk classified as High/Medium/Low based on potential business impact.
+Risks Identified
 
-SQL Injection (High Risk)
-Cross-Site Scripting - XSS (High Risk)
-Missing security headers (Medium Risk)
-Information disclosure (Medium Risk)
-Insecure authentication (Medium Risk)
-Outdated software versions (Low Risk)
+-No authentication required (High Risk)
+-Excessive data exposure (High Risk)
+-Missing rate limiting (Medium Risk)
+-Broken Object Level Authorization - BOLA (Medium Risk)
+-Weak authentication tokens (Medium Risk)
+-No input validation (Low Risk)
+
+Assessment by Valery Vezenegho | CIN: FIT/MAR26/CS7097 | April 2026
